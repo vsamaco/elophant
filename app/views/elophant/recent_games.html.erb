@@ -1,0 +1,18 @@
+<h1>Recent Games: <%= @account_id%></h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>CHAMPION ID</th>
+    <th>DATE</th>
+    <th></th>
+  </tr>
+<% @games['gameStatistics'].each do |game| %>
+  <tr>
+    <td><%= game['gameId'] %></td>
+    <td align="center"><%= game['championId']%></td>
+    <td><%= game['createDate'] %></td>
+    <td align="right"><%= link_to "details", "/" %>
+  </tr>
+<% end %>
+</table>

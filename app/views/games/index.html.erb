@@ -1,0 +1,21 @@
+<h1>Listing games</h1>
+
+<table>
+  <tr>
+    <th>Game ID</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+<% @games.each do |game| %>
+  <tr>
+    <td><%= game.game_id %></td>
+    <td><%= game.game_type %></td>
+    <td><%= link_to 'Show', game %> </td>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+<% end %>
+</table>

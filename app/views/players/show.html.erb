@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Summoner name:</b>
+  <%= @player.summoner_name %>
+</p>
+
+<p>
+  <b>Summoner ID:</b>
+  <%= @player.summoner_id %>
+</p>
+
+<p>
+  <b>Account ID:</b>
+  <%= @player.account_id %>
+</p>
+
+<p><b>Games:</b></p>
+<ul>
+<% @player.game_statistics.each do |game_stat| %>
+  <li><%= link_to game_stat.game_id, game_stat %> <%= champion_name(game_stat.champion_id) %></li>
+<% end %>
+</ul>
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>

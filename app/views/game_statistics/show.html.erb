@@ -1,0 +1,198 @@
+<p id="notice"><%= notice %></p>
+<p><%= link_to "Back to Player", @game_stat.player %>
+<p>
+  <b>Game ID:</b>
+  <%= @game_stat.game_id %>
+</p>
+
+<p>
+  <b>Game Date:</b>
+  <%= @game_stat.game.create_date %>
+</p>
+
+<p>
+  <b>Player:</b>
+  <%= @game_stat.player.summoner_name %>
+</p>
+
+<p>
+  <b>Team ID:</b>
+  <%= @game_stat.team_id %>
+</p>
+
+<p>
+  <b>Champion ID:</b>
+  <%= @game_stat.champion_id %>
+</p>
+
+<p>
+  <b>Skin Index:</b>
+  <%= @game_stat.skin_index %>
+</p>
+
+<p>
+  <b>Game ID:</b>
+  <%= @game_stat.skin_index %>
+</p>
+
+<p>
+  <b>Spell1:</b>
+  <%= @game_stat.spell1 %>
+</p>
+
+<p>
+  <b>Spell2:</b>
+  <%= @game_stat.spell2 %>
+</p>
+
+<p>
+  <b>Time in Queue:</b>
+  <%= @game_stat.time_in_queue %>
+</p>
+
+<p>
+  <b>Ip Earned:</b>
+  <%= @game_stat.ip_earned %>
+</p>
+
+<p>
+  <b>Premade Team:</b>
+  <%= @game_stat.premade_team %>
+</p>
+
+<p>
+  <b>Premade Size:</b>
+  <%= @game_stat.premade_size %>
+</p>
+
+<p>
+  <b>Win:</b>
+  <%= @game_stat.win %>
+</p>
+
+<p>
+  <b>Ranked:</b>
+  <%= @game_stat.ranked %>
+</p>
+
+<p>
+  <b>Items:</b>
+</p>
+<p>
+<ol>
+  <li><%= item_name(@game_stat.item0) %>
+  <li><%= item_name(@game_stat.item1) %>
+  <li><%= item_name(@game_stat.item2) %>
+  <li><%= item_name(@game_stat.item3) %>
+  <li><%= item_name(@game_stat.item4) %>
+  <li><%= item_name(@game_stat.item5) %>
+</ol>  
+
+<p>
+  <b>Physical Damage Dealt Player:</b>
+  <%= @game_stat.physical_damage_dealt_player %>
+</p>
+
+<p>
+  <b>Magic Damage Dealt Player:</b>
+  <%= @game_stat.magic_damage_dealt_player %>
+</p>
+
+<p>
+  <b>Magic Damage Taken:</b>
+  <%= @game_stat.magic_damage_taken %>
+</p>
+
+<p>
+  <b>Vision Wards Bought in Game:</b>
+  <%= @game_stat.vision_wards_bought_in_game %>
+</p>
+
+<p>
+  <b>Sight Wards Bought in Game:</b>
+  <%= @game_stat.sight_wards_bought_in_game %>
+</p>
+
+<p>
+  <b>Turrets Killed:</b>
+  <%= @game_stat.turrets_killed %>
+</p>
+
+<p>
+  <b>Neutral Minions Killed:</b>
+  <%= @game_stat.neutral_minions_killed %>
+</p>
+
+<p>
+  <b>Barracks Killed:</b>
+  <%= @game_stat.barracks_killed %>
+</p>
+
+<p>
+  <b>Champions Killed:</b>
+  <%= @game_stat.champions_killed %>
+</p>
+
+<p>
+  <b>Minions Killed:</b>
+  <%= @game_stat.minions_killed %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @game_stat.level %>
+</p>
+
+<p>
+  <b>Gold Earned:</b>
+  <%= @game_stat.gold_earned %>
+</p>
+
+<p>
+  <b>Num Deaths:</b>
+  <%= @game_stat.num_deaths %>
+</p>
+
+<p>
+  <b>Assists:</b>
+  <%= @game_stat.assists %>
+</p>
+
+<p>
+  <b>Largest Critical Strike:</b>
+  <%= @game_stat.largest_critical_strike %>
+</p>
+
+<p>
+  <b>Largest Killing Spree:</b>
+  <%= @game_stat.largest_killing_spree %>
+</p>
+
+<p>
+  <b>Largest Multi Kill:</b>
+  <%= @game_stat.largest_multi_kill %>
+</p>
+
+<p>
+  <b>Total Damage Dealt:</b>
+  <%= @game_stat.total_damage_dealt %>
+</p>
+
+<p>
+  <b>Total Heal:</b>
+  <%= @game_stat.total_heal %>
+</p>
+
+<p>
+  <b>Total Time Spent Dead:</b>
+  <%= @game_stat.total_time_spent_dead %>
+</p>
+
+<p>
+  <b>Total Damage Taken:</b>
+  <%= @game_stat.total_damage_taken %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_statistic_path(@game_stat) %> |
+<%= link_to 'Back', game_statistics_path %>

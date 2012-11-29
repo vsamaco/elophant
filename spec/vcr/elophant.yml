@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://elophant.com/api/v1/na/getSummonerByName?key=V45wByoYCe2ESQ7h3tnC&output=json&summonerName=dyrus
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 22 Nov 2012 06:08:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '179'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      Limit:
+      - '1000'
+      Remaining:
+      - '1000'
+      Reset:
+      - '900'
+      X-Aspnet-Version:
+      - 4.0.30319
+      Set-Cookie:
+      - __cfduid=da78182a8f067b8a301b738512a89a6171353564483; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.elophant.com
+    body:
+      encoding: US-ASCII
+      string: ! '{"internalName":"dyrus","name":"Dyrus","acctId":32766,"profileIconId":10,"revisionDate":"2012-11-22
+        03:07:29Z","revisionId":0,"summonerLevel":30,"summonerId":5908,"dataVersion":0}'
+    http_version: 
+  recorded_at: Thu, 22 Nov 2012 06:08:04 GMT
+recorded_with: VCR 2.2.5

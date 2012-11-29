@@ -1,0 +1,566 @@
+[
+  {
+    "id": "0",
+    "name": "None"
+  },
+  {
+    "id": "1001",
+    "name": "Boots of Speed"
+  },
+  {
+    "id": "1004",
+    "name": "Faerie Charm"
+  },
+  {
+    "id": "1005",
+    "name": "Meki Pendant"
+  },
+  {
+    "id": "1006",
+    "name": "Rejuvenation Bead"
+  },
+  {
+    "id": "1007",
+    "name": "Regrowth Pendant"
+  },
+  {
+    "id": "1011",
+    "name": "Giant's Belt"
+  },
+  {
+    "id": "1018",
+    "name": "Cloak of Agility"
+  },
+  {
+    "id": "1026",
+    "name": "Blasting Wand"
+  },
+  {
+    "id": "1027",
+    "name": "Sapphire Crystal"
+  },
+  {
+    "id": "1028",
+    "name": "Ruby Crystal"
+  },
+  {
+    "id": "1029",
+    "name": "Cloth Armor"
+  },
+  {
+    "id": "1031",
+    "name": "Chain Vest"
+  },
+  {
+    "id": "1033",
+    "name": "Null-Magic Mantle"
+  },
+  {
+    "id": "1036",
+    "name": "Long Sword"
+  },
+  {
+    "id": "1037",
+    "name": "Pickaxe"
+  },
+  {
+    "id": "1038",
+    "name": "B. F. Sword"
+  },
+  {
+    "id": "1042",
+    "name": "Dagger"
+  },
+  {
+    "id": "1043",
+    "name": "Recurve Bow"
+  },
+  {
+    "id": "1051",
+    "name": "Brawler's Gloves"
+  },
+  {
+    "id": "1052",
+    "name": "Amplifying Tome"
+  },
+  {
+    "id": "1053",
+    "name": "Vampiric Scepter"
+  },
+  {
+    "id": "1054",
+    "name": "Doran's Shield"
+  },
+  {
+    "id": "1055",
+    "name": "Doran's Blade"
+  },
+  {
+    "id": "1056",
+    "name": "Doran's Ring"
+  },
+  {
+    "id": "1057",
+    "name": "Negatron Cloak"
+  },
+  {
+    "id": "1058",
+    "name": "Needlessly Large Rod"
+  },
+  {
+    "id": "1062",
+    "name": "Prospector's Blade"
+  },
+  {
+    "id": "1063",
+    "name": "Prospector's Ring"
+  },
+  {
+    "id": "2003",
+    "name": "Health Potion"
+  },
+  {
+    "id": "2004",
+    "name": "Mana Potion"
+  },
+  {
+    "id": "2037",
+    "name": "Elixir of Fortitude"
+  },
+  {
+    "id": "2038",
+    "name": "Elixir of Agility"
+  },
+  {
+    "id": "2039",
+    "name": "Elixir of Brilliance"
+  },
+  {
+    "id": "2040",
+    "name": "Ichor of Rage"
+  },
+  {
+    "id": "2042",
+    "name": "Oracle's Elixir"
+  },
+  {
+    "id": "2043",
+    "name": "Vision Ward"
+  },
+  {
+    "id": "2044",
+    "name": "Sight Ward"
+  },
+  {
+    "id": "2047",
+    "name": "Oracle's Extract"
+  },
+  {
+    "id": "2048",
+    "name": "Ichor of Illumination"
+  },
+  {
+    "id": "3001",
+    "name": "Abyssal Scepter"
+  },
+  {
+    "id": "3003",
+    "name": "Archangel's Staff"
+  },
+  {
+    "id": "3004",
+    "name": "Manamune"
+  },
+  {
+    "id": "3005",
+    "name": "Atma's Impaler"
+  },
+  {
+    "id": "3006",
+    "name": "Berserker's Greaves"
+  },
+  {
+    "id": "3009",
+    "name": "Boots of Swiftness"
+  },
+  {
+    "id": "3010",
+    "name": "Catalyst the Protector"
+  },
+  {
+    "id": "3020",
+    "name": "Sorcerer's Shoes"
+  },
+  {
+    "id": "3022",
+    "name": "Frozen Mallet"
+  },
+  {
+    "id": "3024",
+    "name": "Glacial Shroud"
+  },
+  {
+    "id": "3026",
+    "name": "Guardian Angel"
+  },
+  {
+    "id": "3027",
+    "name": "Rod of Ages"
+  },
+  {
+    "id": "3028",
+    "name": "Chalice of Harmony"
+  },
+  {
+    "id": "3031",
+    "name": "Infinity Edge"
+  },
+  {
+    "id": "3035",
+    "name": "Last Whisper"
+  },
+  {
+    "id": "3037",
+    "name": "Mana Manipulator"
+  },
+  {
+    "id": "3041",
+    "name": "Mejai's Soulstealer"
+  },
+  {
+    "id": "3044",
+    "name": "Phage"
+  },
+  {
+    "id": "3046",
+    "name": "Phantom Dancer"
+  },
+  {
+    "id": "3047",
+    "name": "Ninja Tabi"
+  },
+  {
+    "id": "3050",
+    "name": "Zeke's Herald"
+  },
+  {
+    "id": "3057",
+    "name": "Sheen"
+  },
+  {
+    "id": "3065",
+    "name": "Spirit Visage"
+  },
+  {
+    "id": "3067",
+    "name": "Kindlegem"
+  },
+  {
+    "id": "3068",
+    "name": "Sunfire Cape"
+  },
+  {
+    "id": "3069",
+    "name": "Shurelya's Reverie"
+  },
+  {
+    "id": "3070",
+    "name": "Tear of the Goddess"
+  },
+  {
+    "id": "3071",
+    "name": "The Black Cleaver"
+  },
+  {
+    "id": "3072",
+    "name": "The Bloodthirster"
+  },
+  {
+    "id": "3075",
+    "name": "Thornmail"
+  },
+  {
+    "id": "3077",
+    "name": "Tiamat"
+  },
+  {
+    "id": "3078",
+    "name": "Trinity Force"
+  },
+  {
+    "id": "3082",
+    "name": "Warden's Mail"
+  },
+  {
+    "id": "3083",
+    "name": "Warmog's Armor"
+  },
+  {
+    "id": "3084",
+    "name": "Overlord's Bloodmail"
+  },
+  {
+    "id": "3086",
+    "name": "Zeal"
+  },
+  {
+    "id": "3089",
+    "name": "Rabadon's Deathcap"
+  },
+  {
+    "id": "3090",
+    "name": "Wooglet's Witchcap"
+  },
+  {
+    "id": "3091",
+    "name": "Wit's End"
+  },
+  {
+    "id": "3093",
+    "name": "Avarice Blade"
+  },
+  {
+    "id": "3096",
+    "name": "Philosopher's Stone"
+  },
+  {
+    "id": "3097",
+    "name": "Emblem of Valor"
+  },
+  {
+    "id": "3098",
+    "name": "Kage's Lucky Pick"
+  },
+  {
+    "id": "3099",
+    "name": "Soul Shroud"
+  },
+  {
+    "id": "3100",
+    "name": "Lich Bane"
+  },
+  {
+    "id": "3101",
+    "name": "Stinger"
+  },
+  {
+    "id": "3102",
+    "name": "Banshee's Veil"
+  },
+  {
+    "id": "3104",
+    "name": "Lord Van Damm's Pillager"
+  },
+  {
+    "id": "3105",
+    "name": "Aegis of the Legion"
+  },
+  {
+    "id": "3106",
+    "name": "Madred's Razors"
+  },
+  {
+    "id": "3108",
+    "name": "Fiendish Codex"
+  },
+  {
+    "id": "3109",
+    "name": "Force of Nature"
+  },
+  {
+    "id": "3110",
+    "name": "Frozen Heart"
+  },
+  {
+    "id": "3111",
+    "name": "Mercury's Treads"
+  },
+  {
+    "id": "3114",
+    "name": "Malady"
+  },
+  {
+    "id": "3115",
+    "name": "Nashor's Tooth"
+  },
+  {
+    "id": "3116",
+    "name": "Rylai's Crystal Scepter"
+  },
+  {
+    "id": "3117",
+    "name": "Boots of Mobility"
+  },
+  {
+    "id": "3122",
+    "name": "Wicked Hatchet"
+  },
+  {
+    "id": "3123",
+    "name": "Executioner's Calling"
+  },
+  {
+    "id": "3124",
+    "name": "Guinsoo's Rageblade"
+  },
+  {
+    "id": "3126",
+    "name": "Madred's Bloodrazor"
+  },
+  {
+    "id": "3128",
+    "name": "Deathfire Grasp"
+  },
+  {
+    "id": "3132",
+    "name": "Heart of Gold"
+  },
+  {
+    "id": "3134",
+    "name": "The Brutalizer"
+  },
+  {
+    "id": "3135",
+    "name": "Void Staff"
+  },
+  {
+    "id": "3136",
+    "name": "Haunting Guise"
+  },
+  {
+    "id": "3138",
+    "name": "Leviathan"
+  },
+  {
+    "id": "3140",
+    "name": "Quicksilver Sash"
+  },
+  {
+    "id": "3141",
+    "name": "Sword of the Occult"
+  },
+  {
+    "id": "3142",
+    "name": "Youmuu's Ghostblade"
+  },
+  {
+    "id": "3143",
+    "name": "Randuin's Omen"
+  },
+  {
+    "id": "3144",
+    "name": "Bilgewater Cutlass"
+  },
+  {
+    "id": "3145",
+    "name": "Hextech Revolver"
+  },
+  {
+    "id": "3146",
+    "name": "Hextech Gunblade"
+  },
+  {
+    "id": "3152",
+    "name": "Will of the Ancients"
+  },
+  {
+    "id": "3153",
+    "name": "Blade of the Ruined King"
+  },
+  {
+    "id": "3154",
+    "name": "Wriggle's Lantern"
+  },
+  {
+    "id": "3155",
+    "name": "Hexdrinker"
+  },
+  {
+    "id": "3156",
+    "name": "Maw of Malmortius"
+  },
+  {
+    "id": "3157",
+    "name": "Zhonya's Hourglass"
+  },
+  {
+    "id": "3158",
+    "name": "Ionian Boots of Lucidity"
+  },
+  {
+    "id": "3159",
+    "name": "Grez's Spectral Lantern"
+  },
+  {
+    "id": "3165",
+    "name": "Morello's Evil Tome"
+  },
+  {
+    "id": "3166",
+    "name": "Bonetooth Necklace"
+  },
+  {
+    "id": "3170",
+    "name": "Moonflair Spellblade"
+  },
+  {
+    "id": "3172",
+    "name": "Cloak and Dagger"
+  },
+  {
+    "id": "3173",
+    "name": "Eleisa's Miracle"
+  },
+  {
+    "id": "3174",
+    "name": "Athene's Unholy Grail"
+  },
+  {
+    "id": "3178",
+    "name": "Ionic Spark"
+  },
+  {
+    "id": "3180",
+    "name": "Odyn's Veil"
+  },
+  {
+    "id": "3181",
+    "name": "Sanguine Blade"
+  },
+  {
+    "id": "3184",
+    "name": "Entropy"
+  },
+  {
+    "id": "3185",
+    "name": "The Lightbringer"
+  },
+  {
+    "id": "3186",
+    "name": "Kitae's Bloodrazor"
+  },
+  {
+    "id": "3187",
+    "name": "Hextech Sweeper"
+  },
+        {
+    "id": "3188",
+    "name": "Blackfire Torch"
+        },
+  {
+    "id": "3190",
+    "name": "Locket of the Iron Solari"
+  },
+  {
+    "id": "3196",
+    "name": "Augment: Power"
+  },
+  {
+    "id": "3197",
+    "name": "Augment: Gravity"
+  },
+  {
+    "id": "3198",
+    "name": "Augment: Death"
+  }
+]

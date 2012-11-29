@@ -1,0 +1,27 @@
+<h1>Listing game statistics</h1>
+
+<table>
+  <tr>
+    <th>Game ID</th>
+    <th>Player</th>
+    <th>Champion</th>
+    <th>W/L</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @game_stats.each do |game_stat| %>
+  <tr>
+    <td><%= game_stat.game_id %></td>
+    <td><%= game_stat.player.summoner_name %></td>
+    <td><%= champion_name(game_stat.champion_id) %></td>
+    <td><%= game_stat.win ? "WIN" : "LOSE" %></td>
+    <td><%= game_stat.game.create_date ? time_ago_in_words(game_stat.game.create_date.to_time) : '' %></td>
+    <td><%= link_to 'Show', game_stat %></td>
+    <td>Edit</td>
+    <td>Destroy</td>
+  </tr>
+<% end %>
+</table>

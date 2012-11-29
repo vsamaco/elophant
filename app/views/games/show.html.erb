@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Game ID:</b>
+  <%= @game.game_id %>
+</p>
+
+<p>
+  <b>Game Type:</b>
+  <%= @game.game_type %>
+</p>
+
+<p>
+  <b>Queue Type:</b>
+  <%= @game.queue_type %>
+</p>
+
+<p>
+  <b>Sub Type:</b>
+  <%= @game.sub_type %>
+</p>
+
+<p>
+  <b>Players:</b>
+</p>
+<ul>
+<% @game.players.each do |player| %>
+  <li>
+    <%= player.summoner_name %>
+  </li>
+<% end %>
+</ul>
+
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

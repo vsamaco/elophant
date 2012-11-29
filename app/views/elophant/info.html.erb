@@ -1,0 +1,10 @@
+<ul>
+  <% if @info %>
+    <% @info.each do |detail| %>
+    <li><%= detail %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to("Recent Games", elophant_recent_games_path(:account_id => @info['acctId'])) %>
+<%= link_to("Teams", elophant_teams_path(:summoner_id => @info['summonerId'])) %>

@@ -1,0 +1,23 @@
+<h1>Game</h1>
+<h2>Players</h2>
+<table>
+<tr>
+  <th>ID</th>
+  <th>Champion</th>
+  <th>Statistics</th>
+</tr>
+<% @game.players.each do |summoner_id, player| %>
+<tr>
+  <td><%= summoner_id %></td>
+  <td><%= player.champion_id %></td>
+  <td>
+    <ul>
+    <% if player.statistics %>
+      <% player.statistics.each do |stat| %>
+      <li><%= stat["statType"] %>:<%= stat["value"] %></li>
+      <% end %>
+    <% end %>
+    </ul>
+  </td>
+<% end %>
+</table>
