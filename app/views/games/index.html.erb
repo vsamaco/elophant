@@ -1,21 +1,23 @@
 <h1>Listing games</h1>
 
 <table>
-  <tr>
-    <th>Game ID</th>
-    <th>Type</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  
-<% @games.each do |game| %>
-  <tr>
-    <td><%= game.game_id %></td>
-    <td><%= game.game_type %></td>
-    <td><%= link_to 'Show', game %> </td>
-    <td>Edit</td>
-    <td>Delete</td>
-  </tr>
-<% end %>
+  <thead>
+    <tr>
+      <th>Game ID</th>
+      <th>Type</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.game_id %></td>
+        <td><%= game.game_type %></td>
+        <td>
+          <%= link_to 'Show', game, :class => 'btn btn-mini' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
+
