@@ -1,27 +1,28 @@
 <h1>Listing players</h1>
 
 <table>
-  <tr>
-    <th>Summoner name</th>
-    <th>Summoner</th>
-    <th>Account</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @players.each do |player| %>
-  <tr>
-    <td><%= player.summoner_name %></td>
-    <td><%= player.summoner_id %></td>
-    <td><%= player.account_id %></td>
-    <td><%= link_to 'Show', player %></td>
-    <td><%= link_to 'Edit', edit_player_path(player) %></td>
-    <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <thead>
+    <tr>
+      <th>Summoner name</th>
+      <th>Summoner</th>
+      <th>Account</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.summoner_name %></td>
+        <td><%= player.summoner_id %></td>
+        <td><%= player.account_id %></td>
+        <td>
+          <%= link_to 'Show', player, :class => 'btn btn-mini' %>
+          <%= link_to 'Edit', edit_player_path(player), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Player', new_player_path %>
+<%= link_to 'New Player', new_player_path, :class => 'btn btn-primary' %>
