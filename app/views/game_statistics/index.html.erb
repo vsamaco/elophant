@@ -15,7 +15,7 @@
 <% @game_stats.each do |game_stat| %>
   <tr>
     <td><%= game_stat.game_id %></td>
-    <td><%= game_stat.player.summoner_name %></td>
+    <td><%= game_stat.player ? game_stat.player.summoner_name : game_stat.player_id %></td>
     <td><%= champion_name(game_stat.champion_id) %></td>
     <td><%= game_stat.win ? "WIN" : "LOSE" %></td>
     <td><%= game_stat.game.create_date ? time_ago_in_words(game_stat.game.create_date.to_time) : '' %></td>
