@@ -42,4 +42,8 @@ class GameStatistic < ActiveRecord::Base
                   :game
   belongs_to :player
   belongs_to :game, foreign_key: :game_id, primary_key: :game_id
+  
+  def kda
+    "#{champions_killed || 0}/#{num_deaths || 0}/#{assists || 0}"
+  end
 end
