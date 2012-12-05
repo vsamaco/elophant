@@ -1,4 +1,6 @@
 Elophant::Application.routes.draw do
+  get "home/index"
+
   get "game_statistics/index"
 
   get "game_statistics/show"

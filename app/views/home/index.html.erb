@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="span4">
+    <h3>Recent Games</h3>
+    <table class="table table-bordered">
+      <% @recent_stats.each do |recent_stat| %>
+      <tr>
+        <td><%= recent_stat.player.summoner_name %></td>
+        <td><%= champion_name(recent_stat.champion_id) %></td>
+        <td>
+          <%= recent_stat.kda %>
+        </td>
+        <td><%= time_ago_in_words(recent_stat.created_at) %>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  
+  <div class="span4">MIDDLE</div>
+  <div class="span4">RIGHT</div>
+</div>
