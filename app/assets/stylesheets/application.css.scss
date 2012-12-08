@@ -23,3 +23,39 @@
    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
    box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
+
+img.item {
+  width: 32px
+}
+
+img.champion {
+  width: 64px
+}
+
+.recent-games {
+  .media {
+    margin-bottom: 5px;
+    
+    .stats {
+      padding: 10px 0;
+    
+      td {
+        padding: 0 5px;
+      
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    
+      tr.stat-value td {
+        color: #141414;
+        text-shadow: 1px 1px 0 white;
+      }
+    
+      tr.stat-label td {
+        color: #7A7A7A;
+        text-shadow: 1px 1px 0 white;
+      }
+    }
+  }
+}

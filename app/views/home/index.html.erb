@@ -1,20 +1,37 @@
 <div class="row">
   <div class="span4">
     <h3>Recent Games</h3>
-    <table class="table table-bordered">
+    <div class="recent-games">
       <% @recent_stats.each do |recent_stat| %>
-      <tr>
-        <td><%= recent_stat.player.summoner_name %></td>
-        <td><%= champion_name(recent_stat.champion_id) %></td>
-        <td>
-          <%= recent_stat.kda %>
-        </td>
-        <td><%= time_ago_in_words(recent_stat.created_at) %>
-      </tr>
+      <div class="media">
+        <div class="pull-right champion"><%= image_tag "league-of-legends-database/icons/#{recent_stat.champion_id}.jpg", :class => 'champion', :title => champion_name(recent_stat.champion_id) %>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading summoner-name"><%= recent_stat.player.summoner_name %> <span class="label win <%= recent_stat.win ? 'label-success' : 'label-important' %>"><%= recent_stat.win ? 'WIN' : 'LOSE' %></span></h4>
+          <div class="timeago"><%= time_ago_in_words(recent_stat.game.create_date.to_time) %></div>
+
+          <table class="stats">
+            <tr class="stat-value">
+              <td><%= recent_stat.kda %></td>
+              <td><%= number_to_human recent_stat.gold_earned, :units => { :thousand => 'K'} %></td>
+              <td><%= recent_stat.minions_killed %></td>
+            </tr>
+            <tr class="stat-label">
+              <td>KDA</td>
+              <td>Gold</td>
+              <td>Minions</td>
+            </tr>
+          </table>
+
+          <div class="items">
+            <% (0..5).each do |index| %>
+              <%= image_tag "league-of-legends-database/items/#{recent_stat["item#{index}"]}.png", :title => item_name(recent_stat["item#{index}"]), :class => 'item' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
       <% end %>
-    </table>
+    </div>
   </div>
-  
-  <div class="span4">MIDDLE</div>
   <div class="span4">RIGHT</div>
 </div>
