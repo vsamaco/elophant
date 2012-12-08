@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @recent_stats = GameStatistic.order('created_at DESC').limit(5)
+    @recent_stats = GameStatistic.find(:all,
+      :joins => :game,
+      :order => 'games.create_date DESC',
+      :limit => 10
+    )
   end
 end
