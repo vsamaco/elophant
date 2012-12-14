@@ -562,5 +562,17 @@
   {
     "id": "3198",
     "name": "Augment: Death"
+  },
+  {
+    "id": "2041",
+    "name": "Crystalline Flask"
+  },
+  {
+    "id" : "3222",
+    "name" : "Mikaels Crucible"
+  },
+  {
+    "id" : "2045",
+    "name" : "Rejuvenation Potion"
   }
 ]
