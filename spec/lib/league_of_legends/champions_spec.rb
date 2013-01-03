@@ -6,7 +6,7 @@ module LeagueOfLegends
     
     before(:each) do
       File.stub(:read => 
-        '[{"id": 1, "name":"Annie"}]'
+        '{"data":[{"id": 1, "name":"Annie"}], "success":true}'
       )
     end
     

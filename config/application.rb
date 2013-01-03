@@ -59,6 +59,6 @@ module Elophant
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     
-    config.elophant_key = "V45wByoYCe2ESQ7h3tnC"
+    config.elophant_key = "maAwenLo7usJKeb0N8GY"
   end
 end

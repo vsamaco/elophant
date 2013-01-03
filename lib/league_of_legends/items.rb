@@ -23,7 +23,8 @@ module LeagueOfLegends
     def load_items(file_name)
       fs = File.read(Rails.root.join("lib/league_of_legends/#{file_name}"))
       json = JSON.parse(fs)
-      @items = Hash[json.map { |item| [item['id'].to_i, item['name']] }]
+      data = json["data"]
+      @items = Hash[data.map { |item| [item['id'].to_i, item['name']] }]
     end
   end
 end

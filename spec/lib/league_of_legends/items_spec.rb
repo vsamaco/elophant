@@ -5,7 +5,7 @@ module LeagueOfLegends
     subject { Items.instance }
     
     before(:each) do
-      File.stub(:read => '[{"id": "1001","name": "Boots of Speed"}]')
+      File.stub(:read => '{"data" : [{"id": "1001","name": "Boots of Speed"}], "success": true}')
     end
     
     it "should throw exception additional instance" do
