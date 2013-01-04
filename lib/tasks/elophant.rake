@@ -4,7 +4,7 @@ namespace :elophant do
     require_relative '../elophant'
 
     summoner = Elophant::Summoner.new
-    players = Player.where('account_id = 31894009')
+    players = Player.where('account_id IS NOT NULL')
     
     players.each do |player|
       recent_games = summoner.recent_games(player.account_id)
@@ -17,7 +17,7 @@ namespace :elophant do
           g.queue_type = recent_game["queueType"]
           g.sub_type = recent_game["subType"]
           g.map_id = recent_game["mapId"]
-          g.create_date = g.date_to_iso(recent_game["createDate"])
+          g.create_date = Game::date_to_iso(recent_game["createDate"])
           
           g.players << player unless g.players.include?(player)
         end
