@@ -1,7 +1,7 @@
 module Elophant  
   class Summoner
     include HTTParty
-    base_uri 'http://elophant.com/api/v1'
+    base_uri 'http://api.elophant.com/v2'
     default_params :output => 'json'
     format :json
     DEFAULT_OPTIONS = {key: Rails.configuration.elophant_key}
@@ -19,9 +19,9 @@ module Elophant
     end
     
     def recent_games(account_id)
-      options = DEFAULT_OPTIONS.merge({accountId: account_id})
-
-      self.class.get("/#{region}/getRecentGames", query: options)
+      
+      # self.class.get("/na/recent_games/#{account_id}?key=maAwenLo7usJKeb0N8GY")
+      call_api("recent_games/#{account_id}", DEFAULT_OPTIONS)
     end
     
     def player_stats(account_id, season="CURRENT")
@@ -46,6 +46,12 @@ module Elophant
       options = DEFAULT_OPTIONS.merge({summonerName: summoner_name})
 
       self.class.get("/#{region}/getInProgressGameInfo", query: options)
+    end
+    
+    private
+    
+    def call_api(endpoint, params)
+      self.class.get("/#{region}/#{endpoint}", query: params)
     end
   end
   
