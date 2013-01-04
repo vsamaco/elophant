@@ -4,12 +4,12 @@ namespace :elophant do
     require_relative '../elophant'
 
     summoner = Elophant::Summoner.new
-    players = Player.where('account_id IS NOT NULL')
+    players = Player.where('account_id = 31894009')
     
     players.each do |player|
       recent_games = summoner.recent_games(player.account_id)
       
-      recent_games["gameStatistics"].each do |recent_game|
+      recent_games["data"]["gameStatistics"].each do |recent_game|
         game_id = recent_game["gameId"]
         game = Game.find_or_initialize_by_game_id(game_id) do |g|
           g.game_id = game_id
@@ -17,11 +17,11 @@ namespace :elophant do
           g.queue_type = recent_game["queueType"]
           g.sub_type = recent_game["subType"]
           g.map_id = recent_game["mapId"]
-          g.create_date = recent_game["createDate"]
+          g.create_date = g.date_to_iso(recent_game["createDate"])
           
           g.players << player unless g.players.include?(player)
         end
-
+        
         recent_game["fellowPlayers"].each do |game_fellow_player|
           fellow_player = Player.find_or_initialize_by_summoner_id(game_fellow_player["summonerId"]) do |fs|
             fs.summoner_id = game_fellow_player["summonerId"]
