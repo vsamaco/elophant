@@ -1,3 +1,32 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "compass/typography/lists/inline-list";
+@import "_colors";
+
+.player-summary {
+  .name {
+    font-weight: bold;
+  }
+  
+  ul.games {
+    @include inline-list;
+    
+    li {
+      display: inline-block;
+      
+      img {
+        max-width: 32px;
+      }
+    }
+    
+    li.win, li.lose {
+      border: 3px solid $border-win;
+    }
+    
+    li.lose {
+      border-color: $border-lose;
+    }
+  }
+}
