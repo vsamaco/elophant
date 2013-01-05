@@ -5,5 +5,7 @@ class HomeController < ApplicationController
       :order => 'games.create_date DESC',
       :limit => 10
     )
+    
+    @player_summary = Player.active[4]
   end
 end

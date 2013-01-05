@@ -43,6 +43,9 @@ class GameStatistic < ActiveRecord::Base
   belongs_to :player
   belongs_to :game, foreign_key: :game_id, primary_key: :game_id
   
+  scope :recent, lambda { joins(:game).order('games.create_date DESC') }
+
+  
   def kda
     "#{champions_killed || 0}/#{num_deaths || 0}/#{assists || 0}"
   end

@@ -3,4 +3,14 @@ class Player < ActiveRecord::Base
   
   has_and_belongs_to_many :games
   has_many :game_statistics
+  
+  scope :active, where("account_id IS NOT NULL")
+  
+  def summary
+    summary_recent_games
+  end
+  
+  def summary_recent_games
+    self.game_statistics.recent.limit(5)
+  end
 end
