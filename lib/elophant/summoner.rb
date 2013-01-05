@@ -1,4 +1,10 @@
-module Elophant  
+module Elophant 
+  class ElophantException < StandardError
+    def initialize(msg)
+      super(msg)
+    end
+  end
+   
   class Summoner
     include HTTParty
     base_uri 'http://api.elophant.com/v2'
@@ -25,9 +31,7 @@ module Elophant
     end
     
     def player_stats(account_id, season="CURRENT")
-      options = DEFAULT_OPTIONS.merge({accountId: account_id, season: season})
-      
-      self.class.get("/#{region}/getPlayerStats")
+      call_api("player_stats/#{account_id}/#{season}")
     end
     
     def ranked_stats(account_id, season="CURRENT")
@@ -50,8 +54,16 @@ module Elophant
     
     private
     
-    def call_api(endpoint, params)
-      self.class.get("/#{region}/#{endpoint}", query: params)
+    def call_api(endpoint, params={})
+      params = DEFAULT_OPTIONS.merge(params)
+      response = self.class.get("/#{region}/#{endpoint}", query: params)
+
+      if response["success"] == false
+        message = response["error"] if response.respond_to?("error")
+        raise Elophant::ElophantException.new("#{message}")
+      end
+
+      response
     end
   end
   

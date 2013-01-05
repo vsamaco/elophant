@@ -1,7 +1,8 @@
 namespace :elophant do
+  require_relative '../elophant'
+  
   desc 'Fetch most recent games for all players'
   task recent_games: :environment do
-    require_relative '../elophant'
 
     summoner = Elophant::Summoner.new
     players = Player.where('account_id IS NOT NULL')
@@ -73,5 +74,30 @@ namespace :elophant do
     end
     
     puts "Completed recent games tasks"
+  end
+  
+  desc 'Fetch player statistics'
+  task player_stats: :environment do
+    summoner = Elophant::Summoner.new
+    players = Player.where('account_id = 31894009')
+    
+    players.each do |player|
+      begin
+        stats = summoner.player_stats(player.account_id)
+      rescue Elophant::ElophantException => e
+        puts e.to_s
+        next
+      end
+      
+      player_statistic = PlayerStatistic.create_player_stat(player.account_id, stats["data"])
+      
+      if player_statistic.new_record?
+        puts "Created player statistic #{player.summoner_name}"
+      end
+      
+      player_statistic.save!
+    end
+    
+    puts "Complete player stats task"
   end
 end
