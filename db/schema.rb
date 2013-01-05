@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121129022925) do
+ActiveRecord::Schema.define(:version => 20130105035033) do
 
   create_table "game_statistics", :force => true do |t|
     t.integer  "game_id"
@@ -73,6 +73,23 @@ ActiveRecord::Schema.define(:version => 20121129022925) do
     t.integer "game_id"
     t.integer "player_id"
     t.integer "team_id"
+  end
+
+  create_table "player_statistics", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "max_rating"
+    t.integer  "leaves"
+    t.string   "modify_date"
+    t.integer  "losses"
+    t.integer  "wins"
+    t.string   "stat_summary_type"
+    t.integer  "total_minion_kills"
+    t.integer  "total_neutral_minions_killed"
+    t.integer  "total_assists"
+    t.integer  "total_champion_kills"
+    t.integer  "total_turrent_killed"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "players", :force => true do |t|
