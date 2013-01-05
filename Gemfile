@@ -19,6 +19,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass', '~> 2.2.1.1'
+  gem 'compass-rails', '~> 1.0.3'
 end
 
 group :development, :test do
@@ -32,6 +33,7 @@ end
 
 gem 'jquery-rails'
 gem 'httparty'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
