@@ -59,8 +59,8 @@ module Elophant
       response = self.class.get("/#{region}/#{endpoint}", query: params)
 
       if response["success"] == false
-        message = response["error"] if response.respond_to?("error")
-        raise Elophant::ElophantException.new("#{message}")
+        error_msg = response["error"]
+        raise Elophant::ElophantException.new(error_msg)
       end
 
       response

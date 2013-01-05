@@ -85,7 +85,7 @@ namespace :elophant do
       begin
         stats = summoner.player_stats(player.account_id)
       rescue Elophant::ElophantException => e
-        puts e.to_s
+        puts e.message
         next
       end
       
