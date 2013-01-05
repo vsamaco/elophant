@@ -81,13 +81,14 @@ ActiveRecord::Schema.define(:version => 20130105035033) do
     t.integer  "leaves"
     t.string   "modify_date"
     t.integer  "losses"
+    t.integer  "rating"
     t.integer  "wins"
     t.string   "stat_summary_type"
     t.integer  "total_minion_kills"
     t.integer  "total_neutral_minions_killed"
     t.integer  "total_assists"
     t.integer  "total_champion_kills"
-    t.integer  "total_turrent_killed"
+    t.integer  "total_turrets_killed"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
   end
