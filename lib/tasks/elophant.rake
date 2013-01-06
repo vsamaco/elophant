@@ -79,7 +79,7 @@ namespace :elophant do
   desc 'Fetch player statistics'
   task player_stats: :environment do
     summoner = Elophant::Summoner.new
-    players = Player.where('account_id = 31894009')
+    players = Player.where('account_id IS NOT NULL')
     
     players.each do |player|
       begin
@@ -89,7 +89,7 @@ namespace :elophant do
         next
       end
       
-      player_statistic = PlayerStatistic.create_player_stat(player.account_id, stats["data"])
+      player_statistic = PlayerStatistic.create_player_stat(player, stats["data"])
       
       if player_statistic.new_record?
         puts "Created player statistic #{player.summoner_name}"

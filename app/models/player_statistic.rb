@@ -15,18 +15,20 @@ class PlayerStatistic < ActiveRecord::Base
                   
   belongs_to :player
   
+  scope :ranked_solo, where(:stat_summary_type => 'RankedSolo5x5').order('modify_date DESC')
+  
   def self.date_to_iso(date)
     milliseconds = date[/Date\((\d+)\)/][$1].to_i
     timestamp = Time.at(milliseconds/1000)
     DateTime.parse(timestamp.to_s).to_s
   end
   
-  def self.create_player_stat(account_id, data)
+  def self.create_player_stat(player, data)
     data["playerStatSummaries"]["playerStatSummarySet"].each do |set|
       if set["playerStatSummaryType"] == "RankedSolo5x5"
           
-        player_statistic = PlayerStatistic.find_or_initialize_by_player_id_and_stat_summary_type(account_id, "RankedSolo5x5") do |ps|  
-          ps.player_id = account_id
+        player_statistic = PlayerStatistic.find_or_initialize_by_player_id_and_stat_summary_type(player, "RankedSolo5x5") do |ps|  
+          ps.player_id = player.id
           ps.max_rating = set["maxRating"]
           ps.leaves = set["leaves"]
           ps.modify_date = PlayerStatistic::date_to_iso(set["modifyDate"])
