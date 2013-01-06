@@ -2,12 +2,16 @@
 <div class="player-summary section">
   <p class="name"><%= @player_summary.summoner_name %></p>
   <p class="status">Current playing RANKED</p>
-  <p class="elo">2073 ELO</p>
-  <p class="top-rating">2163 Top Rating</p>
-  <p class="record">117 Wins / 111 Loses</p>
+  
+  <% if @player_summary.summary[:player_stat] %>
+  <p class="elo"><%= @player_summary.summary[:player_stat].rating %> ELO</p>
+  <p class="top-rating"><%= @player_summary.summary[:player_stat].max_rating %> Top Rating</p>
+  <p class="record"><%= @player_summary.summary[:player_stat].wins %> Wins / <%= @player_summary.summary[:player_stat].losses %> Loses</p>
+  <% end %>
+  
   <h4>Recent Games</h4>
   <ul class="games clearfix">
-  <% @player_summary.summary.each do |stat| %>
+  <% @player_summary.summary[:recent_games].each do |stat| %>
     <li class="<%= stat.win ? 'win' : 'lose' %>"><%= image_tag "league-of-legends-database/icons/#{stat.champion_id}.jpg", :class => 'champion', :title => champion_name(stat.champion_id) %></li>
   <% end %>
   </ul>
