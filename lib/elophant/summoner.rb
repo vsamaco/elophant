@@ -27,7 +27,7 @@ module Elophant
     def recent_games(account_id)
       
       # self.class.get("/na/recent_games/#{account_id}?key=maAwenLo7usJKeb0N8GY")
-      call_api("recent_games/#{account_id}", DEFAULT_OPTIONS)
+      call_api("recent_games/#{account_id}")
     end
     
     def player_stats(account_id, season="CURRENT")
