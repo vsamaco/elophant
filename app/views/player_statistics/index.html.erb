@@ -1,2 +1,21 @@
-<h1>PlayerStatistics#index</h1>
-<p>Find me in app/views/player_statistics/index.html.erb</p>
+<h1>Listing PlayerStatistics</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Stat Summary Type</th>
+      <th>Rating</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @player_statistics.each do |player_stat| %>
+    <tr>
+      <td><%= player_stat.player.summoner_name %></td>
+      <td><%= player_stat.stat_summary_type %></td>
+      <td><%= player_stat.rating %></td>
+      <td></td>
+    </tr>
+  <% end %>  
+  </tbody>
+</table>
