@@ -60,4 +60,33 @@ class GameStatistic < ActiveRecord::Base
       gs.spell2 = data["spell2Id"].to_i
     end
   end
+  
+  def self.init_recent_game(game, player, data)
+    game_statistic = GameStatistic.find_or_initialize_by_game_id_and_player_id(game.id, player.id) do |gs|
+      gs.game_id = game.game_id
+      gs.player = player
+      gs.team_id = data["teamId"]
+      gs.champion_id = data["championId"]
+      gs.skin_index = data["skinIndex"]
+      gs.spell1 = data["spell1"]
+      gs.spell2 = data["spell2"]
+      gs.time_in_queue = data["timeInQueue"]
+      gs.ip_earned = data["ipEarned"]
+      gs.premade_team = data["premadeTeam"]
+      gs.premade_size = data["premadeSize"]
+      gs.ranked = data["ranked"]
+    
+      data["statistics"].each do |stat|
+        stat_type = stat["statType"].downcase
+        stat_value = stat["value"]
+        gs[stat_type] = stat_value if gs.respond_to?(stat_type)
+      end
+    end
+    
+    if game_statistic.new_record?
+      puts "Created new game statistics #{game_statistic.id}"
+    end
+    
+    game_statistic
+  end
 end

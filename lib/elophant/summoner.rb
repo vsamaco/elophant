@@ -25,8 +25,6 @@ module Elophant
     end
     
     def recent_games(account_id)
-      
-      # self.class.get("/na/recent_games/#{account_id}?key=maAwenLo7usJKeb0N8GY")
       call_api("recent_games/#{account_id}")
     end
     

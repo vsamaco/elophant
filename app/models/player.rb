@@ -24,9 +24,15 @@ class Player < ActiveRecord::Base
   
   def self.init_player(data)
     summoner_id = data["summonerId"].to_i
-    Player.find_or_initialize_by_summoner_id(summoner_id) do |p|
+    player = Player.find_or_initialize_by_summoner_id(summoner_id) do |p|
       p.summoner_id = summoner_id
       p.summoner_name = data["summonerName"]
     end
+    
+    if player.new_record?
+      puts "Created new fellow player #{player.summoner_name}" 
+    end
+    
+    player
   end
 end
