@@ -47,9 +47,7 @@ module Elophant
     end
     
     def in_progress_game(summoner_name)
-      options = DEFAULT_OPTIONS.merge({summonerName: summoner_name})
-
-      self.class.get("/#{region}/getInProgressGameInfo", query: options)
+      call_api("in_progress_game_info/#{summoner_name}")
     end
     
     private

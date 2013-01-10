@@ -21,4 +21,12 @@ class Player < ActiveRecord::Base
   def summary_recent_games
     self.game_statistics.recent.limit(5)
   end
+  
+  def self.init_player(data)
+    summoner_id = data["summonerId"].to_i
+    Player.find_or_initialize_by_summoner_id(summoner_id) do |p|
+      p.summoner_id = summoner_id
+      p.summoner_name = data["summonerName"]
+    end
+  end
 end

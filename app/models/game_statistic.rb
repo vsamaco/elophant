@@ -49,4 +49,15 @@ class GameStatistic < ActiveRecord::Base
   def kda
     "#{champions_killed || 0}/#{num_deaths || 0}/#{assists || 0}"
   end
+  
+  def self.init_in_game_progress(game, player, data)
+    game_statistic = GameStatistic.find_or_initialize_by_game_id_and_player_id(game.id, player.id) do |gs|
+      gs.game_id = game.id
+      gs.player_id = player.id
+      gs.champion_id = data["championId"]
+      gs.skin_index = data["skinIndex"]
+      gs.spell1 = data["spell1Id"].to_i
+      gs.spell2 = data["spell2Id"].to_i
+    end
+  end
 end
