@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.elophant.com/v2/na/in_progress_game_info/wingsofdeathx?key=maAwenLo7usJKeb0N8GY&output=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '5041'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Microsoft-HTTPAPI/2.0
+      Developer-Limit:
+      - '1000'
+      Developer-Remaining:
+      - '998'
+      Developer-Reset:
+      - '721'
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Date:
+      - Mon, 07 Jan 2013 03:10:04 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"lastModifiedDate":"\/Date(-62135568000000-0800)\/","game":{"gameStartTime":"\/Date(0-0800)\/","spectatorsAllowed":"NONE","passwordSet":false,"gameType":"RANKED_GAME","gameTypeConfigId":2,"gameState":"IN_PROGRESS","observers":[],"statusOfParticipants":"1111111111","id":657361995,"teamOne":[{"timeAddedToQueue":1357527441344,"index":0,"accountId":32484100,"botDifficulty":"NONE","summonerInternalName":"cris","lastSelectedSkinIndex":5,"profileIconId":508,"teamOwner":false,"summonerId":19770082,"pickTurn":1,"summonerName":"Cris","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1357527441344,"index":0,"accountId":32805278,"botDifficulty":"NONE","summonerInternalName":"pr0llylol","lastSelectedSkinIndex":0,"profileIconId":28,"teamOwner":true,"summonerId":20011987,"pickTurn":3,"summonerName":"pr0lly
+        LOL","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1357527438843,"index":0,"accountId":33599571,"botDifficulty":"NONE","summonerInternalName":"trueld","lastSelectedSkinIndex":0,"profileIconId":22,"teamOwner":false,"summonerId":20573254,"pickTurn":3,"summonerName":"TruelD","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1357527016017,"index":0,"accountId":31634097,"botDifficulty":"NONE","summonerInternalName":"zamphira","lastSelectedSkinIndex":0,"profileIconId":7,"teamOwner":false,"summonerId":570422,"pickTurn":5,"summonerName":"Zamphira","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1357526819409,"index":0,"accountId":32354173,"botDifficulty":"NONE","summonerInternalName":"wingsofdeathx","lastSelectedSkinIndex":5,"profileIconId":539,"teamOwner":false,"summonerId":19660288,"pickTurn":5,"summonerName":"Wingsofdeathx","pickMode":0,"originalPlatformId":"NA"}],"teamTwo":[{"timeAddedToQueue":1357527572142,"index":0,"accountId":41760571,"botDifficulty":"NONE","summonerInternalName":"nydushermain","lastSelectedSkinIndex":0,"profileIconId":531,"teamOwner":false,"summonerId":27020067,"pickTurn":2,"summonerName":"NydusHerMain","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1357527462443,"index":0,"accountId":32736337,"botDifficulty":"NONE","summonerInternalName":"crsrhux","lastSelectedSkinIndex":4,"profileIconId":505,"teamOwner":false,"summonerId":19959767,"pickTurn":2,"summonerName":"Crs
+        Rhux","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1357527471208,"index":0,"accountId":41855819,"botDifficulty":"NONE","summonerInternalName":"caprici\u00F8us","lastSelectedSkinIndex":0,"profileIconId":4,"teamOwner":false,"summonerId":27321428,"pickTurn":4,"summonerName":"Caprici\u00F8us","pickMode":0,"originalPlatformId":"NA1"},{"timeAddedToQueue":1357527657162,"index":0,"accountId":78247,"botDifficulty":"NONE","summonerInternalName":"pulsecastro","lastSelectedSkinIndex":3,"profileIconId":505,"teamOwner":true,"summonerId":51405,"pickTurn":4,"summonerName":"Pulse
+        CaStRo","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1357527657162,"index":0,"accountId":32858761,"botDifficulty":"NONE","summonerInternalName":"pulseevaniskus","lastSelectedSkinIndex":1,"profileIconId":540,"teamOwner":false,"summonerId":20052657,"pickTurn":6,"summonerName":"Pulse
+        Evaniskus","pickMode":0,"originalPlatformId":"NA"}],"bannedChampions":[{"pickTurn":1,"championId":53,"teamId":100},{"pickTurn":2,"championId":28,"teamId":200},{"pickTurn":3,"championId":4,"teamId":100},{"pickTurn":4,"championId":98,"teamId":200},{"pickTurn":5,"championId":54,"teamId":100},{"pickTurn":6,"championId":121,"teamId":200}],"name":"Match-657361995","spectatorDelay":0,"terminatedCondition":"NOT_TERMINATED","queueTypeName":"RANKED_SOLO_5x5","optimisticLock":22,"maxNumPlayers":10,"queuePosition":0,"gameMode":"CLASSIC","mapId":1,"pickTurn":8,"playerChampionSelections":[{"summonerInternalName":"pulseevaniskus","spell1Id":3,"spell2Id":4,"selectedSkinIndex":0,"championId":89},{"summonerInternalName":"cris","spell1Id":6,"spell2Id":14,"selectedSkinIndex":0,"championId":8},{"summonerInternalName":"trueld","spell1Id":11,"spell2Id":4,"selectedSkinIndex":0,"championId":56},{"summonerInternalName":"caprici\u00F8us","spell1Id":11,"spell2Id":4,"selectedSkinIndex":0,"championId":57},{"summonerInternalName":"wingsofdeathx","spell1Id":14,"spell2Id":4,"selectedSkinIndex":0,"championId":81},{"summonerInternalName":"nydushermain","spell1Id":12,"spell2Id":4,"selectedSkinIndex":0,"championId":55},{"summonerInternalName":"crsrhux","spell1Id":4,"spell2Id":14,"selectedSkinIndex":0,"championId":115},{"summonerInternalName":"zamphira","spell1Id":3,"spell2Id":4,"selectedSkinIndex":0,"championId":117},{"summonerInternalName":"pulsecastro","spell1Id":4,"spell2Id":14,"selectedSkinIndex":0,"championId":104},{"summonerInternalName":"pr0llylol","spell1Id":4,"spell2Id":14,"selectedSkinIndex":0,"championId":105}]},"playerCredentials":{"gameId":657361995,"lastSelectedSkinIndex":0,"observer":true,"observerServerIp":"216.133.234.17","playerId":32354173,"observerServerPort":8088,"observerEncryptionKey":"ryjpVs7wpZOCPKmrKxIxclx2t4Lfo9JF"},"gameName":"match-657361995"},"success":true}'
+    http_version: 
+  recorded_at: Mon, 07 Jan 2013 03:10:08 GMT
+recorded_with: VCR 2.2.5
