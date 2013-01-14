@@ -8,7 +8,12 @@ namespace :elophant do
     players = Player.where('account_id IS NOT NULL')
     
     players.each do |player|
-      recent_games = summoner.recent_games(player.account_id)
+      begin
+        recent_games = summoner.recent_games(player.account_id)
+      rescue Elophant::ElophantException => e
+        puts e.message
+        next
+      end
       
       recent_games["data"]["gameStatistics"].each do |recent_game|
         game_id = recent_game["gameId"]
