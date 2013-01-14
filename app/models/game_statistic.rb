@@ -62,9 +62,9 @@ class GameStatistic < ActiveRecord::Base
   end
   
   def self.init_recent_game(game, player, data)
-    game_statistic = GameStatistic.find_or_initialize_by_game_id_and_player_id(game.id, player.id) do |gs|
+    game_statistic = GameStatistic.find_or_initialize_by_game_id_and_player_id(game.game_id, player.id) do |gs|
       gs.game_id = game.game_id
-      gs.player = player
+      gs.player_id = player.id
       gs.team_id = data["teamId"]
       gs.champion_id = data["championId"]
       gs.skin_index = data["skinIndex"]
