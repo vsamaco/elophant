@@ -62,25 +62,31 @@ class GameStatistic < ActiveRecord::Base
   end
   
   def self.init_recent_game(game, player, data)
-    game_statistic = GameStatistic.find_or_initialize_by_game_id_and_player_id(game.game_id, player.id) do |gs|
-      gs.game_id = game.game_id
-      gs.player_id = player.id
-      gs.team_id = data["teamId"]
-      gs.champion_id = data["championId"]
-      gs.skin_index = data["skinIndex"]
-      gs.spell1 = data["spell1"]
-      gs.spell2 = data["spell2"]
-      gs.time_in_queue = data["timeInQueue"]
-      gs.ip_earned = data["ipEarned"]
-      gs.premade_team = data["premadeTeam"]
-      gs.premade_size = data["premadeSize"]
-      gs.ranked = data["ranked"]
-    
-      data["statistics"].each do |stat|
-        stat_type = stat["statType"].downcase
-        stat_value = stat["value"]
-        gs[stat_type] = stat_value if gs.respond_to?(stat_type)
+    game_statistic = GameStatistic.find_or_initialize_by_game_id_and_player_id(game.game_id, player.id)
+    game_statistic.game_id = game.game_id
+    game_statistic.player_id = player.id
+    game_statistic.team_id = data["teamId"].to_i
+    game_statistic.champion_id = data["championId"].to_i
+    game_statistic.skin_index = data["skinIndex"].to_i
+    game_statistic.spell1 = data["spell1"].to_i
+    game_statistic.spell2 = data["spell2"].to_i
+    game_statistic.time_in_queue = data["timeInQueue"].to_i
+    game_statistic.ip_earned = data["ipEarned"].to_i
+    game_statistic.premade_team = !!data["premadeTeam"]
+    game_statistic.premade_size = data["premadeSize"].to_i
+    game_statistic.ranked = !!data["ranked"]
+  
+    data["statistics"].each do |stat|
+      stat_type = stat["statType"].downcase
+      stat_value = if stat_type == "lose"
+        stat_type = "win"
+        false
+      else
+        stat["value"].to_i
       end
+      
+      game_statistic[stat_type] = stat_value if game_statistic.respond_to?(stat_type)
+
     end
     
     if game_statistic.new_record?
